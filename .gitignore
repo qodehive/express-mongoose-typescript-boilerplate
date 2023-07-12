@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.env
+.vscode
+auth-jwt
+auth-jwt.pub
+mongo_db_volume
+WinstonLogs
+.nyc_output
+package-lock.json
+.idea
+yarn.lock

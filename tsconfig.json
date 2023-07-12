@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "module": "commonjs" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
+    "outDir": "./dist" /* Redirect output structure to the directory. */,
+    // "baseUrl": "./src" /* Base directory to resolve non-absolute module names. */,
+    "pretty": true,
+    "moduleResolution": "node" /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */,
+    "resolveJsonModule": true,
+    "declaration": true /* Generates corresponding '.d.ts' file. */,
+    "strict": true /* Enable all strict type-checking options. */,
+    "noImplicitAny": true /* Raise error on expressions and declarations with an implied 'any' type. */,
+    "useUnknownInCatchVariables": false,
+    "esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */,
+    "downlevelIteration": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*test.ts", "node_modules", "dist"]
+}
