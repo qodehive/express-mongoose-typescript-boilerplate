@@ -2,7 +2,7 @@ import { Schema, Model, Document } from "mongoose";
 import { MongoDbConnections } from "../MongoDbConnections";
 import { CollectionNames } from "../CollectionNames";
 import { MongoTimestampI, MongoUtils } from "../MongoUtils";
-import { AuthorizationRole } from "../../CommonConstants";
+import { UserRole } from "../../CommonConstants";
 
 export interface IUserEntity extends Document, MongoTimestampI {
   firstName?: string;
@@ -10,7 +10,7 @@ export interface IUserEntity extends Document, MongoTimestampI {
   userName?: string;
   emailId: string;
   passwordHash: string;
-  userRole?: keyof typeof AuthorizationRole
+  userRole?: keyof typeof UserRole;
 }
 
 export const UserSchema: Schema = new Schema<IUserEntity>(
@@ -20,7 +20,7 @@ export const UserSchema: Schema = new Schema<IUserEntity>(
     userName: { type: String, required: false },
     emailId: { type: String, required: true, unique: true },
     passwordHash: { type: String, required: true },
-    userRole: { type: String, required: false, enum: Object.values(AuthorizationRole), default: AuthorizationRole.USER }
+    userRole: { type: String, required: false, enum: Object.values(UserRole), default: UserRole.USER }
   },
   {
     timestamps: true,
